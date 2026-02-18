@@ -146,8 +146,8 @@
 
       // Initialize with credentials
       await searchInterface.initialize({
-        accessToken: 'xxb0be3d51-5f26-49cc-b278-a6af93789048',
-        organizationId: 'yorickcrusebachallengeha5gut65'
+        accessToken: '__COVEO_ACCESS_TOKEN__',
+        organizationId: '__COVEO_ORGANIZATION_ID__'
       });
 
       // Trigger the first search query automatically
@@ -172,7 +172,7 @@
   </header>
 
   <main class="container">
-    <atomic-search-interface id="search" pipeline="challenge_decathlon" fields-to-include='["product_thumbnail", "product_sku", "product_price", "scraped_categories"]' analytics="true">
+    <atomic-search-interface id="search" pipeline="__COVEO_PIPELINE__" fields-to-include='["product_thumbnail", "product_sku", "product_price", "scraped_categories"]' analytics="true">
       <atomic-search-layout>
         
         <atomic-layout-section section="search">
