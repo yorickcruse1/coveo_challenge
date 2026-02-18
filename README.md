@@ -19,8 +19,8 @@ Then open: `http://localhost:8000`
 This project deploys with a GitHub Actions workflow and injects values at deploy time.
 
 1. Push this repository to GitHub.
-2. In your repo, go to **Settings → Secrets and variables → Actions**.
-3. Add these repository secrets:
+2. In your repo, go to **Settings → Environments → github-pages** (create it if needed).
+3. Add these **environment secrets**:
 	- `COVEO_ACCESS_TOKEN`
 	- `COVEO_ORGANIZATION_ID`
 	- `COVEO_PIPELINE`
