@@ -172,7 +172,7 @@
   </header>
 
   <main class="container">
-    <atomic-search-interface id="search" pipeline="challenge_decathlon" fields-to-include='["product_thumbnail", "product_sku", "product_price", "product_category"]' analytics="true">
+    <atomic-search-interface id="search" pipeline="challenge_decathlon" fields-to-include='["product_thumbnail", "product_sku", "product_price", "product_category", "scraped_categories"]' analytics="true">
       <atomic-search-layout>
         
         <atomic-layout-section section="search">
@@ -182,6 +182,8 @@
         </atomic-layout-section>
         
         <atomic-layout-section section="facets">
+          <atomic-facet field="scraped_categories" label="Categories" depends-on="scraped_categories"></atomic-facet>
+          <atomic-facet field="product_category" label="Category" depends-on="product_category"></atomic-facet>
           <atomic-numeric-facet field="product_price" label="Price" with-input="integer" range-algorithm="even"></atomic-numeric-facet>
         </atomic-layout-section>
 
