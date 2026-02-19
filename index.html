@@ -124,7 +124,7 @@
     .panic-overlay h2 {
         color: white;
         margin-top: 20px;
-        font-family: 'Comic Sans MS', cursive; /* Optional: adds to the vibe */
+        font-family: 'Comic Sans MS', cursive;
     }
 
     .close-panic {
@@ -172,7 +172,7 @@
   </header>
 
   <main class="container">
-    <atomic-search-interface id="search" pipeline="challenge_decathlon" fields-to-include='["product_thumbnail", "product_sku", "product_price", "scraped_categories"]' analytics="true">
+    <atomic-search-interface id="search" pipeline="challenge_decathlon" fields-to-include='["product_thumbnail", "product_sku", "product_price", "product_category"]' analytics="true">
       <atomic-search-layout>
         
         <atomic-layout-section section="search">
@@ -182,7 +182,6 @@
         </atomic-layout-section>
         
         <atomic-layout-section section="facets">
-          <atomic-facet field="scraped_categories" label="Category" depends-on="scraped_categories"></atomic-facet>
           <atomic-numeric-facet field="product_price" label="Price" with-input="integer" range-algorithm="even"></atomic-numeric-facet>
         </atomic-layout-section>
 
